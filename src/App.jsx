@@ -8,7 +8,7 @@ function App() {
       <Header />
       <Hero />
       
-      {/* Aquí irían tus otras secciones (Bento Grid, Contacto, etc.) */}
+      
       
       <Footer />
     </>
