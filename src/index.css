@@ -2,6 +2,8 @@
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/container-queries";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* --- Colores --- */
   --color-error: #ba1a1a;

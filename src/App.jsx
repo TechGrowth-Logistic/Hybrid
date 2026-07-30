@@ -1,11 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 // Páginas (Componentes)
 import Hero from './components/Hero'; 
 import SomosHybrid from './components/SomosHybrid/SomosHybrid'; 
 import FibraOptica from './components/FibraOptica/FibraOptica';
+import ObraCivil from './components/ObraCivil/ObraCivil';
+import Microondas from './components/Microondas/Microondas';
+import Contacto from './components/Contacto/Contacto';
 
 function App() {
   return (
@@ -24,13 +26,14 @@ function App() {
           } />
 
           {/* Ruta: Somos Hybrid */}
-          <Route path="/somos-hybrid" element={<SomosHybrid />} />
-          
+          <Route path="/somos-hybrid" element={<SomosHybrid />} />          
           {/* Puedes agregar las demás rutas a medida que las crees */}
           <Route path="/fibra-optica" element={<FibraOptica />} />
+          <Route path="/obra-civil" element={<ObraCivil />} />
+          <Route path="/microondas" element={<Microondas />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </main>
-
       <Footer />
     </div>
   );
