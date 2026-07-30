@@ -16,6 +16,24 @@ export default function SomosHybrid() {
     { title: "Perseverancia", desc: "Capacidad de respuesta ante complejidades técnicas de terreno e infraestructura." }
   ];
 
+  const pilares = [
+    {
+      title: "Misión",
+      icon: "flag",
+      desc: "Brindar servicios de telecomunicaciones de alta calidad con mejora continua, impulsando la satisfacción de nuestros clientes, el desarrollo de nuestros colaboradores y el bienestar de la sociedad."
+    },
+    {
+      title: "Visión",
+      icon: "visibility",
+      desc: "Ser la mejor opción en servicios de telecomunicaciones, impactando positivamente a nuestros colaboradores, clientes y a la sociedad."
+    },
+    {
+      title: "Propuesta de Valor",
+      icon: "verified",
+      desc: "Realizamos servicios integrales de telecomunicaciones en forma eficiente y confiable, asumiendo los compromisos del cliente como propios y con un alto nivel de servicio."
+    }
+  ];
+
   return (
     <section 
       id="somos-hybrid" 
@@ -95,7 +113,28 @@ export default function SomosHybrid() {
             ))}
           </div>
         </div>
-       
+
+        {/* NUEVO BLOQUE: MISIÓN, VISIÓN Y PROPUESTA DE VALOR */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {pilares.map((pilar, idx) => (
+            <div 
+              key={idx}
+              className="bg-white border border-slate-200 shadow-sm dark:bg-slate-900 dark:border-slate-800 dark:shadow-none p-8 rounded-3xl space-y-4 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 group"
+            >
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 dark:bg-blue-600/20 dark:text-blue-400 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <span className="material-symbols-outlined text-2xl">{pilar.icon}</span>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                {pilar.title}
+              </h3>
+              <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                {pilar.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* CLIENTES / RESPALDO COMERCIAL */}
         <ClientesCarousel />        
 
       </div>
